@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import { useState, useEffect } from "react";
 import NumberFormat from "react-number-format";
 
@@ -42,7 +43,7 @@ function App() {
   };
 
   const equals = (e) => {
-    if (e?.target.innerText === "=") {
+    if (e.target.innerText === "=") {
       setTotal(true);
     }
     let cal;
@@ -88,6 +89,7 @@ function App() {
     setInput("0");
   };
   return (
+    <>
     <div className='container'>
       <div className='wrapper'>
         <div className='screen'>
@@ -164,6 +166,7 @@ function App() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
